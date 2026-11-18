@@ -67,7 +67,6 @@ const repoFiles = [
   ]},
   { group: 'Thesis and paper', files: [
     ['Server%20Diagnostic%20Knowledge%20System/README.md', 'Portal README with local setup and project navigation notes.'],
-    ['dell_test/THESIS.pdf', 'Full Phase 1 thesis with the research background, methodology, implementation and reported evaluation.'],
     ['dell_test/IEEE_Conference_Paper.tex', 'LaTeX source for the conference paper draft.'],
     ['dell_test/IEEE_Conference_Paper.pdf', 'Rendered conference paper draft.'],
     ['dell_test/Approach%20Document.pdf', 'Supporting write-up of the research approach.'],
@@ -237,13 +236,13 @@ function App() {
         <button className="mobile-menu-button" onClick={() => setMobileMenu(!mobileMenu)} aria-label="Open navigation"><Icon name="menu" /></button>
         <div className="breadcrumbs">THESIS <span>/</span> SERVER TROUBLESHOOTING <span>/</span> <strong>{activeLabel.toUpperCase()}</strong></div>
         <div className="section-count">{activeIndex + 1} / {sectionList.length}</div>
-        <div className="top-actions"><a className="button button-outline top-download" href={publicFile('THESIS.pdf')} target="_blank" rel="noreferrer"><Icon name="book" size={16} /> Read thesis</a><a className="button button-outline top-download" href={portalRepo} target="_blank" rel="noreferrer"><Icon name="external" size={16} /> GitHub</a></div>
+        <div className="top-actions"><a className="button button-outline top-download" href={portalRepo} target="_blank" rel="noreferrer"><Icon name="external" size={16} /> GitHub</a></div>
       </header>
 
       <main>
         <Section id="overview" eyebrow="01 / Overview" title="Making server troubleshooting knowledge queryable" className="overview-section" current={active === 'overview'}>
           <div className="hero-card">
-            <div className="hero-copy"><h1>Server Diagnostic Knowledge System</h1><p>This project represents server event definitions and their documented troubleshooting information in an ontology and knowledge graph.</p><div className="hero-actions"><button className="button button-light" onClick={() => goTo('architecture')}>View methodology <Icon name="arrow" size={16} /></button><a className="button button-ghost" href={publicFile('THESIS.pdf')} target="_blank" rel="noreferrer">Open thesis PDF <Icon name="external" size={16} /></a></div></div>
+          <div className="hero-copy"><h1>Server Diagnostic Knowledge System</h1><p>This project represents server event definitions and their documented troubleshooting information in an ontology and knowledge graph.</p><div className="hero-actions"><button className="button button-light" onClick={() => goTo('architecture')}>View methodology <Icon name="arrow" size={16} /></button></div></div>
           </div>
           <div className="stat-grid"><div className="stat-card"><strong>6,152</strong><span>event definitions</span><small>Critical and Warning</small></div><div className="stat-card"><strong>339,850</strong><span>RDF triples</span><small>populated graph</small></div><div className="stat-card"><strong>9</strong><span>core classes</span><small>formal ontology model</small></div><div className="stat-card"><strong>3.91<span>/5</span></strong><span>OQuaRE score</span><small>ontology quality</small></div></div>
           <div className="content-block"><div className="content-block-heading"><span>PROJECT AT A GLANCE</span><h3>What was built in this phase</h3></div><div className="detail-table-wrap"><table className="detail-table"><thead><tr><th>Part</th><th>What it contains</th><th>Why it matters</th></tr></thead><tbody><tr><td>Dataset</td><td>6,152 source-traceable Dell Critical and Warning event definitions</td><td>Provides documented material for modelling.</td></tr><tr><td>Ontology</td><td>Classes, subclasses, data properties and named relationships</td><td>Defines a consistent vocabulary for troubleshooting knowledge.</td></tr><tr><td>Knowledge graph</td><td>Event, condition, procedure, instruction and concept nodes</td><td>Makes their documented connections queryable.</td></tr><tr><td>Evaluation</td><td>OQuaRE, HermiT, SHACL, RDF statistics and SPARQL questions</td><td>Checks schema quality, logic, graph structure and query coverage.</td></tr></tbody></table></div></div>
@@ -374,7 +373,7 @@ function App() {
         </Section>
 
         <Section id="resources" eyebrow="19 / Resources" title="Explore the research materials" current={active === 'resources'}>
-          <div className="resource-grid"><a href={publicFile('THESIS.pdf')} target="_blank" rel="noreferrer"><span><strong>Read the thesis</strong><small>Full Phase 1 report · PDF</small></span><Icon name="external" size={16} /></a><a href={publicFile('assets/uml.png')} target="_blank" rel="noreferrer"><span><strong>Open the UML diagram</strong><small>Classes, subclasses, and links</small></span><Icon name="external" size={16} /></a><a href={publicFile('assets/architecture.png')} target="_blank" rel="noreferrer"><span><strong>Open the architecture</strong><small>Research workflow diagram</small></span><Icon name="external" size={16} /></a></div>
+          <div className="resource-grid"><a href={publicFile('assets/uml.png')} target="_blank" rel="noreferrer"><span><strong>Open the UML diagram</strong><small>Classes, subclasses, and links</small></span><Icon name="external" size={16} /></a><a href={publicFile('assets/architecture.png')} target="_blank" rel="noreferrer"><span><strong>Open the architecture</strong><small>Research workflow diagram</small></span><Icon name="external" size={16} /></a></div>
         </Section>
 
       </main>
