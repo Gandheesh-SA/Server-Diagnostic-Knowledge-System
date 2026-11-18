@@ -380,7 +380,7 @@ function App() {
       <div className="section-navigation" aria-label="Section navigation">
         <button className="button button-outline" onClick={() => goTo(sectionList[activeIndex - 1].id)} disabled={activeIndex <= 0}><span aria-hidden="true">←</span> Previous</button>
         <div className="section-progress"><div><i style={{ width: `${((activeIndex + 1) / sectionList.length) * 100}%` }} /></div><span>Section {activeIndex + 1} of {sectionList.length} · {activeLabel}</span></div>
-        <button className="button button-light" onClick={() => goTo(sectionList[activeIndex + 1].id)} disabled={activeIndex >= sectionList.length - 1}>Next <span aria-hidden="true">→</span></button>
+        <button className="button button-outline" onClick={() => goTo(sectionList[activeIndex + 1].id)} disabled={activeIndex >= sectionList.length - 1}>Next <span aria-hidden="true">→</span></button>
       </div>
     </div>
 
